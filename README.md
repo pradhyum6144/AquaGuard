@@ -6,14 +6,14 @@ AquaGuard is an autonomous water-cleaning bot system that removes plastic and no
 
 ![Dashboard Preview](https://via.placeholder.com/800x400/0f172a/10b981?text=AquaGuard+Dashboard)
 
-## 🎯 SDG Alignment
+## SDG Alignment
 
 | SDG | Goal | Our Contribution |
 |-----|------|------------------|
 | **11** | Sustainable Cities and Communities | Cleaner urban water bodies improve city livability |
 | **13** | Climate Action | Reduced plastic in waterways protects marine ecosystems |
 
-## 🏗️ Tech Stack
+##  Tech Stack
 
 ```
 ┌─────────────────────────────────────────────────────────────┐
@@ -44,15 +44,15 @@ AquaGuard is an autonomous water-cleaning bot system that removes plastic and no
 - **Go**: Fast HTTP server with excellent concurrency (goroutines) for handling telemetry from hundreds of bots simultaneously
 - **Rust**: Memory-safe, zero-cost abstractions for our critical security layer—ensures bot commands can't be hijacked
 
-## ✨ Features
+##  Features
 
-- 📊 **Real-time Dashboard**: Live map and impact metrics
-- 🔒 **Encrypted Commands**: AES-256-GCM encryption prevents bot hijacking
-- 🤖 **Trash Classification**: AI distinguishes plastic (collect) from organic (ignore)
-- 🛑 **Manual Override**: Emergency halt for all bots with one click
-- 📈 **Impact Reports**: Track plastic recovered for stakeholder reporting
+-  **Real-time Dashboard**: Live map and impact metrics
+-  **Encrypted Commands**: AES-256-GCM encryption prevents bot hijacking
+-  **Trash Classification**: AI distinguishes plastic (collect) from organic (ignore)
+-  **Manual Override**: Emergency halt for all bots with one click
+-  **Impact Reports**: Track plastic recovered for stakeholder reporting
 
-## 🚀 How to Run Locally
+##  How to Run Locally
 
 ### Prerequisites
 
@@ -90,7 +90,7 @@ npm install
 npm run dev
 ```
 
-## 📡 API Endpoints
+##  API Endpoints
 
 | Method | Endpoint | Description |
 |--------|----------|-------------|
@@ -101,7 +101,7 @@ npm run dev
 | POST | `/command` | Send command to bot |
 | WS | `/ws` | WebSocket for real-time updates |
 
-## 🔐 Security Service
+##  Security Service
 
 | Method | Endpoint | Description |
 |--------|----------|-------------|
@@ -109,7 +109,7 @@ npm run dev
 | POST | `/decrypt` | Decrypt bot responses |
 | GET | `/health` | Service health check |
 
-## 📁 Project Structure
+## Project Structure
 
 ```
 AquaGuard/
