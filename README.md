@@ -4,16 +4,15 @@
 
 AquaGuard is an autonomous water-cleaning bot system that removes plastic and non-organic waste from Indian water bodies. Our bots work 24/7 to clean rivers, lakes, and urban water channels—reducing health hazards for sanitation workers and protecting aquatic ecosystems.
 
-![Dashboard Preview](https://via.placeholder.com/800x400/0f172a/10b981?text=AquaGuard+Dashboard)
 
-## 🎯 SDG Alignment
+##  SDG Alignment
 
 | SDG | Goal | Our Contribution |
 |-----|------|------------------|
 | **11** | Sustainable Cities and Communities | Cleaner urban water bodies improve city livability |
 | **13** | Climate Action | Reduced plastic in waterways protects marine ecosystems |
 
-## 🏗️ Tech Stack
+##  Tech Stack
 
 ```
 ┌─────────────────────────────────────────────────────────────┐
@@ -44,15 +43,15 @@ AquaGuard is an autonomous water-cleaning bot system that removes plastic and no
 - **Go**: Fast HTTP server with excellent concurrency (goroutines) for handling telemetry from hundreds of bots simultaneously
 - **Rust**: Memory-safe, zero-cost abstractions for our critical security layer—ensures bot commands can't be hijacked
 
-## ✨ Features
+##  Features
 
-- 📊 **Real-time Dashboard**: Live map and impact metrics
-- 🔒 **Encrypted Commands**: AES-256-GCM encryption prevents bot hijacking
-- 🤖 **Trash Classification**: AI distinguishes plastic (collect) from organic (ignore)
-- 🛑 **Manual Override**: Emergency halt for all bots with one click
-- 📈 **Impact Reports**: Track plastic recovered for stakeholder reporting
+-  **Real-time Dashboard**: Live map and impact metrics
+-  **Encrypted Commands**: AES-256-GCM encryption prevents bot hijacking
+-  **Trash Classification**: AI distinguishes plastic (collect) from organic (ignore)
+-  **Manual Override**: Emergency halt for all bots with one click
+-  **Impact Reports**: Track plastic recovered for stakeholder reporting
 
-## ⚡ Quick Start (2 minutes)
+##  Quick Start (2 minutes)
 
 ```bash
 # 1. Clone and enter the project
@@ -70,7 +69,7 @@ cd ../frontend && npm install && npm run dev &
 docker-compose up --build
 ```
 
-**Access the dashboard at http://localhost:3000** 🎉
+**Access the dashboard at http://localhost:3000** 
 
 ### Generate Demo Data
 
@@ -82,7 +81,7 @@ python scripts/simulate.py
 
 This sends 50 telemetry pings from 5 virtual bots, making the dashboard come alive!
 
-## 📡 API Endpoints
+## API Endpoints
 
 | Method | Endpoint | Description |
 |--------|----------|-------------|
@@ -93,7 +92,7 @@ This sends 50 telemetry pings from 5 virtual bots, making the dashboard come ali
 | POST | `/command` | Send command to bot |
 | WS | `/ws` | WebSocket for real-time updates |
 
-## 🔐 Security Service
+##  Security Service
 
 | Method | Endpoint | Description |
 |--------|----------|-------------|
@@ -101,7 +100,7 @@ This sends 50 telemetry pings from 5 virtual bots, making the dashboard come ali
 | POST | `/decrypt` | Decrypt bot responses |
 | GET | `/health` | Service health check |
 
-## 📁 Project Structure
+##  Project Structure
 
 ```
 AquaGuard/
@@ -123,33 +122,5 @@ AquaGuard/
 └── README.md
 ```
 
-## 🔮 Finals Roadmap
 
-> *"If everything is already done, we wonder what you'd do with 48 more hours."*
-
-For the **Grand Finals**, we plan to:
-
-1. **Hardware Integration**
-   - Integrate actual **LoRaWAN** modules for long-range, low-power bot communication
-   - Test GPS accuracy with RTK corrections for precise navigation
-
-2. **Physical Testing**
-   - Build and test the **buoyancy chassis** in a local lake
-   - Validate solar panel efficiency for 24/7 operation
-
-3. **ML Enhancement**
-   - Train a custom **YOLOv8 model** on Indian water trash datasets
-   - Improve classification accuracy for specific debris types (plastic bags, bottles, thermocol)
-
-4. **Scale Testing**
-   - Deploy 10+ bots in a controlled environment
-   - Stress test the backend with 1000+ concurrent telemetry streams
-
-## 👥 Team
-
-Built with ❤️ for Smart India Hackathon 2024
-
----
-
-*Empowering sustainable cities, one bot at a time.*
 
