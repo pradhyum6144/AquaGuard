@@ -41,6 +41,8 @@ func main() {
 	// Set up our HTTP routes
 	http.HandleFunc("/health", healthHandler)
 	http.HandleFunc("/telemetry", telemetryHandler)
+	http.HandleFunc("/detection", detectionHandler)
+	http.HandleFunc("/stats", statsHandler)
 
 	// Start the server
 	port := ":8080"
