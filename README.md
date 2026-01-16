@@ -129,10 +129,6 @@ AquaGuard/
 └── README.md
 ```
 
-## 👥 Team
-
-Built with ❤️ for Smart India Hackathon 2024
-
 ---
 
-*Empowering sustainable cities, one bot at a time.*
+
