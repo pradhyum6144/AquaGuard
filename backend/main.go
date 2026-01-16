@@ -7,6 +7,8 @@ import (
 	"net/http"
 	"sync"
 	"time"
+
+	"golang.org/x/net/websocket"
 )
 
 // Bot represents an autonomous water-cleaning robot in the system.
@@ -38,15 +40,25 @@ var botsMutex sync.Mutex
 var bots = make(map[string]TelemetryData)
 
 func main() {
+	// Load persisted stats on startup
+	if err := LoadStats(); err != nil {
+		log.Printf("Warning: could not load stats: %v", err)
+	}
+
 	// Set up our HTTP routes
 	http.HandleFunc("/health", healthHandler)
 	http.HandleFunc("/telemetry", telemetryHandler)
 	http.HandleFunc("/detection", detectionHandler)
 	http.HandleFunc("/stats", statsHandler)
+	http.HandleFunc("/command", commandHandler)
+	http.HandleFunc("/bots", botsHandler)
+
+	// WebSocket endpoint for real-time updates
+	http.Handle("/ws", websocket.Handler(wsHandler))
 
 	// Start the server
 	port := ":8080"
-	fmt.Printf("AquaGuard API server starting on port %s\n", port)
+	fmt.Printf("🤖 AquaGuard API server starting on port %s\n", port)
 	log.Fatal(http.ListenAndServe(port, nil))
 }
 
