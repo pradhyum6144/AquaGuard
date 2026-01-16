@@ -15,9 +15,9 @@ type SecurityClient struct {
 
 // NewSecurityClient creates a new client for the security service
 func NewSecurityClient() *SecurityClient {
-	// BUG: Using wrong port! Security service runs on 8081, not 8082
+	// Fixed: Security service runs on port 8081
 	return &SecurityClient{
-		baseURL: "http://localhost:8082", // This will fail!
+		baseURL: "http://localhost:8081",
 	}
 }
 
