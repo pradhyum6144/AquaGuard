@@ -52,43 +52,35 @@ AquaGuard is an autonomous water-cleaning bot system that removes plastic and no
 - 🛑 **Manual Override**: Emergency halt for all bots with one click
 - 📈 **Impact Reports**: Track plastic recovered for stakeholder reporting
 
-## 🚀 How to Run Locally
-
-### Prerequisites
-
-- Docker & Docker Compose
-- OR: Go 1.21+, Rust 1.74+, Node.js 20+
-
-### Option 1: Docker (Recommended)
+## ⚡ Quick Start (2 minutes)
 
 ```bash
-# Clone the repository
-git clone https://github.com/your-team/aquaguard.git
-cd aquaguard
+# 1. Clone and enter the project
+git clone https://github.com/pradhyum6144/AquaGuard.git
+cd AquaGuard
 
-# Start all services
+# 2. Start all services (choose one option)
+
+# Option A: If you have Go + Rust + Node installed
+cd backend && go run . &
+cd ../security && cargo run &
+cd ../frontend && npm install && npm run dev &
+
+# Option B: Docker (if available)
 docker-compose up --build
-
-# Access the dashboard
-open http://localhost:3000
 ```
 
-### Option 2: Manual Setup
+**Access the dashboard at http://localhost:3000** 🎉
+
+### Generate Demo Data
 
 ```bash
-# Terminal 1: Start Go Backend
-cd backend
-go run .
-
-# Terminal 2: Start Rust Security Service
-cd security
-cargo run
-
-# Terminal 3: Start Frontend
-cd frontend
-npm install
-npm run dev
+# Run the simulator to populate the dashboard with realistic data
+pip install requests  # if needed
+python scripts/simulate.py
 ```
+
+This sends 50 telemetry pings from 5 virtual bots, making the dashboard come alive!
 
 ## 📡 API Endpoints
 
@@ -125,9 +117,33 @@ AquaGuard/
 ├── frontend/          # Next.js dashboard
 │   ├── src/app/
 │   └── Dockerfile
+├── scripts/
+│   └── simulate.py   # Demo data generator
 ├── docker-compose.yml
 └── README.md
 ```
+
+## 🔮 Finals Roadmap
+
+> *"If everything is already done, we wonder what you'd do with 48 more hours."*
+
+For the **Grand Finals**, we plan to:
+
+1. **Hardware Integration**
+   - Integrate actual **LoRaWAN** modules for long-range, low-power bot communication
+   - Test GPS accuracy with RTK corrections for precise navigation
+
+2. **Physical Testing**
+   - Build and test the **buoyancy chassis** in a local lake
+   - Validate solar panel efficiency for 24/7 operation
+
+3. **ML Enhancement**
+   - Train a custom **YOLOv8 model** on Indian water trash datasets
+   - Improve classification accuracy for specific debris types (plastic bags, bottles, thermocol)
+
+4. **Scale Testing**
+   - Deploy 10+ bots in a controlled environment
+   - Stress test the backend with 1000+ concurrent telemetry streams
 
 ## 👥 Team
 
@@ -136,3 +152,4 @@ Built with ❤️ for Smart India Hackathon 2024
 ---
 
 *Empowering sustainable cities, one bot at a time.*
+
