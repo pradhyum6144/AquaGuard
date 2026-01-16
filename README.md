@@ -4,8 +4,6 @@
 
 AquaGuard is an autonomous water-cleaning bot system that removes plastic and non-organic waste from Indian water bodies. Our bots work 24/7 to clean rivers, lakes, and urban water channels—reducing health hazards for sanitation workers and protecting aquatic ecosystems.
 
-![Dashboard Preview](https://via.placeholder.com/800x400/0f172a/10b981?text=AquaGuard+Dashboard)
-
 ## SDG Alignment
 
 | SDG | Goal | Our Contribution |
